@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* ------------ fons y body ----------------------------------- */
+
+html, body{
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url('../img/fons.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom left, #FFD1D1 50%, #FFFFFF 50%);
+    z-index: -1;
+}
+
+
+
+
+/* ------------ Titulo de la pagina -------------------------------------- */
+
+.logo{
+    top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gray{
+    color: gray;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+.black{
+    color: black;
+}
+
+/* ------------ Secciones de cada pagina ----------------------------------- */
+
+
+.cap {
+    position: relative;
+    text-align: center;
+
+}
+
+
+.contingut {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center; 
+    padding: 0px;
+}
+
+.contingut {
+    width: 1000px; 
+    height: 30rem; 
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    justify-items: center; 
+    padding: 0px; 
+    
+}
+  
+/* ------------ Responsive ----------------------------------- */
+
+  @media (max-width: 1024px) {
+    .contingut {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    .contingut {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+
+/* ------------ coches ----------------------------------- */
+
+.destacat {
+    text-align: center;
+    width: 100%;
+}
+
+
+.destacat img {
+    max-width: 100%; 
+    height: auto; 
+
+}
+
+
+@media (max-width: 1024px) {
+    .contingut {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .contingut {
+        grid-template-columns: 
+    }
+}
+
+
+
+.comentario {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+    font-style: italic;
+
+}
+
+
+/* ------------ Animació cada coche ----------------------------------- */
+
+.imagen-camaleon {
+    position: relative;
+    width: 80vh;
+    height: 600px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+
+.imagen-camaleon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: cambiarImagen 20s infinite;
+}
+
+
+@keyframes cambiarImagen {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.imagen-camaleon img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+
+.imagen-camaleon img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.imagen-camaleon img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.imagen-camaleon img:nth-child(4) {
+    animation-delay: 9s;
+
+}
+
+
+/* ------------ Animació cada destacat ----------------------------------- */
+
+
+
+.destacat:hover{
+ animation: girasol 2s infinite linear;
+    
+ 
+}
+
+
+.destacat p.comentario {
+    transform: none; 
+    transition: none; 
+}
+
+
+@keyframes girasol {
+
+    0%{
+            transform: rotate(0deg)
+        }
+    
+    100%{
+            transform: rotate(360deg)
+        }
+    
+}
+
+
+
+/* ------------ Footer ----------------------------------- */
+
+.footer-logo {
+    position: relative;
+    bottom: 0;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.footer-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
